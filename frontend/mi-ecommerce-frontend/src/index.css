@@ -17,3 +17,63 @@ body {
   margin-right: auto;
 }
 
+/* Animación para los ojos del robot /
+@keyframes blink {
+  0%, 50%, 100% {
+    ry: 20; / Ojos abiertos /
+  }
+  25%, 75% {
+    ry: 2; / Ojos cerrados /
+  }
+}
+
+.animate-blink {
+  animation: blink 4s infinite;
+  transform-origin: center;
+}
+
+/ Estilos para la barra de scroll personalizada del chatbot /
+.chatbot-scroll-container {
+  scrollbar-width: none; / Firefox /
+  -ms-overflow-style: none; / IE/Edge /
+}
+
+.chatbot-scroll-container::-webkit-scrollbar {
+  display: none; / Chrome/Safari/Opera /
+}
+
+.chatbot-scroll-track {
+  @apply absolute right-2 top-0 h-full w-2 bg-gray-200 rounded-full cursor-pointer;
+}
+
+.chatbot-scroll-thumb {
+  @apply absolute right-0 w-2 bg-blue-500 rounded-full hover:bg-blue-600 transition-colors;
+}
+
+/ Opcional: Si quieres más control sobre la animación /
+.animate-blink-slow {
+  animation: blink 6s infinite;
+}
+
+.animate-blink-fast {
+  animation: blink 2s infinite;
+}
+
+/ Estilos generales de scroll (para el resto de la aplicación) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f7fafc;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e0;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a0aec0;
+}
